@@ -90,12 +90,6 @@
       </div>
     </div>
 
-    <div id="projects">
-      <h1 class="md-heading text-left">
-        Projects
-      </h1>
-    <div class="project-container">
-    </div>
 
 
     </div>
@@ -318,44 +312,9 @@
     </div>
   `;
 
-  document.querySelector('.project-container').innerHTML += projectHtml;
-
-  // Extract owner and repo from the repoLink
-  const repoPathMatch = repoLink.match(/^https:\/\/github\.com\/([^\/]+)\/([^\/]+)/);
-  if (!repoPathMatch) {
-    console.error('Invalid GitHub repository URL:', repoLink);
-    document.querySelector(`#${projectId} .star-count`).textContent = 'N/A';
-    return;
-  }
-
-  const owner = repoPathMatch[1];
-  const repo = repoPathMatch[2];
-
-  // Fetch star count from GitHub API
-  fetch(`https://api.github.com/repos/${owner}/${repo}`)
-    .then(response => response.json())
-    .then(data => {
-      const starCount = data.stargazers_count;
-      document.querySelector(`#${projectId} .star-count`).textContent = starCount;
-    })
-    .catch(error => {
-      console.error('Error fetching star count:', error);
-      document.querySelector(`#${projectId} .star-count`).textContent = 'N/A';
-    });
 }
 
 
-  addProject(
-    "OSWorld",
-    "The first-of-its-kind scalable, real computer environment for multimodal agents, supporting task setup, execution-based evaluation across various operating systems.",
-    "https://github.com/xlang-ai/OSWorld",
-  );
-
-  addProject(
-    "Montessori-Instruct",
-    "Montessori is a novel data synthesis framework that: tailors the data generation capabilities of the teacher model to align with the student's learning preferences.",
-    "https://github.com/cxcscmu/Montessori-Instruct",
-  )
 
   // addProject(
   //   "Self-Reward",
