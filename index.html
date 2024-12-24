@@ -87,14 +87,6 @@
       <div class="pub-list main-text-box">
       </div>
     </div>
-    
-    <div id="papers" class="publications">
-      <h1 class="md-heading text-left">
-        Under Review
-      </h1>
-      <div class="pub-list main-text-box">
-      </div>
-    </div>
 
     <div id="papers" class="publications">
       <h1 class="md-heading text-left">
@@ -201,65 +193,6 @@
   //     dest.blur();
   // }
 
-  let reviseCount = 0;
-
-  function addRevise(title, authors, conference, special, link, code) {
-      let listEntry = "<div class=\"pub\">";
-      
-      // use link as arxivLink
-      listEntry += "<div class=\"pub-content\"><div class=\"title\"><a href=\"" + link + "\">" + title + "</a></div>";
-
-      // authors
-      // find "Jingshu Peng" in authors and bold & underline it
-
-      let authorList = authors.split(", ");
-      let newAuthorList = [];
-      for (let i = 0; i < authorList.length; i++) {
-          if (authorList[i].includes("J. Peng")) {
-              newAuthorList.push("<b><u>" + authorList[i] + "</u></b>");
-          } else {
-              newAuthorList.push(authorList[i]);
-          }
-      }
-      listEntry += "<div class=\"authors\">" + newAuthorList.join(", ") + "</div>";
-
-
-      // conference
-      if (conference != null) {
-          if (special != null) {
-            listEntry += "<div class=\"publishon\"><i>" + conference + "</i><span class=\"special\"><b> " + special + "</b></span><span class=\"place\"></span></div>";
-          }
-          else {
-            listEntry += "<div class=\"publishon\"><i>" + conference + "</i></div>";
-          }
-      }
-
-      // pdf
-      //listEntry += " <a href=\"" + link + "\"><span class=\"label\">[paper]</span></a>";
-
-
-      if (code != null) {
-          listEntry += " <a href=\"" + code + "\"><span class=\"label\">[code]</span></a>";
-      }
-
-
-      listEntry += "<br>";
-
-      listEntry += "<div id=\"div" + paperCount + "\" style=\"font-size:15px; width: 0px; padding: 0px; background: rgb(245, 245, 245);margin-top: -12px;\"></div><br></div></div>";
-
-      document.querySelector('.pub-list.main-text-box').innerHTML += listEntry;
-
-      reviseCount += 1;
-  }
-
-  addRevise(
-    title="Multi-environment robotic locomotion through integrated median-paired and caudal fin propulsion",
-    authors="J. Peng, Y. Xie, Q. Yang, Y. Jia, W. Huang, G. Xie",
-    conference="Ocean Engineering",
-    special=null,
-    link="./files/Multi_environment_robotic_locomotion_through_integrated_median_paired_and_caudal_fin_propulsion (1).pdf", 
-  )
-
 
   
   let paperCount = 0;
@@ -312,6 +245,14 @@
 
       paperCount += 1;
   }
+  
+  addPaper(
+    title="Multi-environment robotic locomotion through integrated median-paired and caudal fin propulsion",
+    authors="J. Peng, Y. Xie, Q. Yang, Y. Jia, W. Huang, G. Xie",
+    conference="Ocean Engineering",
+    special=null,
+    link="./files/Multi_environment_robotic_locomotion_through_integrated_median_paired_and_caudal_fin_propulsion (1).pdf", 
+  )
 
   addPaper(
     title="Comparative Analysis of Whole-Body Center-of-Mass Estimation Methods in Dynamic and Static Tasks Using Marker-Based Systems", 
