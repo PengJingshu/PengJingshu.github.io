@@ -1,421 +1,315 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jingshu Peng</title>
-  <link rel="shortcut icon" type="image/x-icon" href="./images/icon/robot.png" />
-  <meta name="description" lang="en" content="This is an academic website for Jingshu Peng.">
-  <meta name="keywords" lang="en" content="Jingshu Peng" />
-  <link rel="stylesheet" href="main.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jingshu Peng</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/icon/robot.png">
+    <meta
+      name="description"
+      content="Jingshu Peng is a mechanical engineering master's student at Carnegie Mellon University working on robotics, bio-inspired locomotion, controls, sensing, and assistive systems."
+    >
+    <meta
+      name="keywords"
+      content="Jingshu Peng, robotics, Carnegie Mellon University, mechanical engineering, PhD applicant"
+    >
+    <link rel="stylesheet" href="main.css">
   </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="#top">Jingshu Peng</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-<body>
-
-
-  <div id="profile-cover" class="cover img-responsive"> 
-    <div id="profile-namecard" class="profile-wrapper">
-      <div id="my-contact" class="profile-col profile-col-2">
-        <div id="my-name" class="text-grey-dark">
-          Jingshu Peng &nbsp;<span class="chinese">(彭靖舒)</span><br>
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Carnegie Mellon University · Mechanical Engineering</p>
+            <h1>Jingshu Peng <span class="name-cn">(彭靖舒)</span></h1>
+            <p class="hero-lead">
+              I am a Master of Science research student in Mechanical Engineering at
+              Carnegie Mellon University. My work sits at the intersection of
+              robotics, bio-inspired locomotion, control, and human-centered
+              assistive systems.
+            </p>
+            <p class="hero-note">
+              I am preparing applications for <strong>Fall 2027 PhD admission</strong>
+              and am especially interested in research environments spanning robot
+              design, embodied intelligence, and experimental robotics.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="./files/CV_JingshuPeng.pdf">Download CV</a>
+              <a class="button button-secondary" href="mailto:jingshup@andrew.cmu.edu">Email Me</a>
+            </div>
+            <ul class="contact-inline">
+              <li><strong>Email</strong> jingshup [at] andrew.cmu.edu</li>
+              <li><strong>GitHub</strong> <a href="https://github.com/PengJingshu" target="_blank" rel="noopener">PengJingshu</a></li>
+              <li><strong>Location</strong> Pittsburgh, Pennsylvania</li>
+            </ul>
+          </div>
+          <div class="hero-visual">
+            <div class="portrait-card">
+              <img
+                src="./images/self-portrait/profile copy smallSize.jpg"
+                alt="Portrait of Jingshu Peng"
+                class="portrait"
+              >
+            </div>
+          </div>
         </div>
-        <div id="my-title" class="text-grey">
-          <p>Graduate<br>
-          @ Mechanical Engineering, Carnegie Mellon University<br>
-          <b>Email: </b>jingshup [at] andrew.cmu.edu </p>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">About</p>
+            <h2>Research profile</h2>
+          </div>
+          <div class="two-column">
+            <div class="card prose">
+              <p>
+                I am currently pursuing an M.S. in Mechanical Engineering at
+                <a href="https://www.cmu.edu/" target="_blank" rel="noopener">Carnegie Mellon University</a>.
+                Before CMU, I earned a B.Eng. in Energy and Power Engineering and a
+                B.S. in Mechanics from
+                <a href="https://www.tsinghua.edu.cn/" target="_blank" rel="noopener">Tsinghua University</a>.
+              </p>
+              <p>
+                My research goal is to build robotic systems that move robustly in
+                complex environments and interact intelligently with the physical
+                world. I am particularly drawn to problems where mechanical design,
+                sensing, and control must be co-designed rather than treated in
+                isolation.
+              </p>
+              <p>
+                Across projects at Tsinghua University, Peking University, the
+                University of Notre Dame, and Carnegie Mellon, I have worked on
+                robotic locomotion, biomechanical estimation, sensor fusion, and
+                research-oriented prototyping.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Research interests</h3>
+              <div class="tag-list">
+                <span class="tag">Bio-inspired Robotics</span>
+                <span class="tag">Robotic Locomotion</span>
+                <span class="tag">Control Systems</span>
+                <span class="tag">Assistive Robotics</span>
+                <span class="tag">Robot Design</span>
+                <span class="tag">Sensing and Estimation</span>
+              </div>
+              <div class="mini-divider"></div>
+              <h3>Technical toolkit</h3>
+              <ul class="compact-list">
+                <li>Python, MATLAB, C/C++, ROS/ROS2, Gazebo, PyBullet</li>
+                <li>Model-based control, PID, real-time implementation</li>
+                <li>CAD, rapid prototyping, 3D printing, embedded systems</li>
+                <li>IMU, force sensing, computer vision, sensor integration</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div id="social-profile">
-          <a href="https://x.com/JingshuPeng9">Twitter</a>
-           / 
-           <a href="./files/CV_JingshuPeng.pdf">CV</a>
+      </section>
+
+      <section id="research" class="section section-alt">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Research</p>
+            <h2>Selected highlights</h2>
+          </div>
+          <div class="highlight-grid">
+            <article class="card highlight-card">
+              <p class="card-label">Theme 1</p>
+              <h3>Bio-inspired locomotion</h3>
+              <p>
+                Studied amphibious and underwater robotic locomotion with a focus on
+                integrated propulsion, mechanism design, and experimentally grounded
+                performance analysis.
+              </p>
+            </article>
+            <article class="card highlight-card">
+              <p class="card-label">Theme 2</p>
+              <h3>Biomechanics and estimation</h3>
+              <p>
+                Worked on center-of-mass estimation during non-cyclic human motion,
+                combining marker-based methods with ground reaction force
+                information for improved robustness.
+              </p>
+            </article>
+            <article class="card highlight-card">
+              <p class="card-label">Theme 3</p>
+              <h3>Embodied systems engineering</h3>
+              <p>
+                Enjoy building full-stack experimental systems where mechanical
+                design, controls, sensors, and software are iterated together.
+              </p>
+            </article>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div id="my-pic" class="profile-col profile-col-1">
-        <img id="profile-avatar" src="./images/self-portrait/1234.jpg" alt="Me" class="circle-img border-dark">
-      </div>
-    </div>
-  </div>
+      <section id="publications" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Outputs</p>
+            <h2>Publications and intellectual property</h2>
+          </div>
+          <div class="stack">
+            <article class="paper-item">
+              <h3>
+                <a href="https://doi.org/10.1016/j.oceaneng.2025.120982" target="_blank" rel="noopener">
+                  Multi-environment robotic locomotion through integrated pectoral and caudal fin propulsion
+                </a>
+              </h3>
+              <p class="paper-authors">
+                <strong>J. Peng</strong>, Y. Xie, Q. Yang, Y. Jia, W. Huang, G. Xie
+              </p>
+              <p class="paper-venue">Ocean Engineering, June 2025</p>
+            </article>
 
-  <!-- <div class="wrapper">
-    <hr>
-        <div id="menu">
+            <article class="paper-item">
+              <h3>
+                <a href="https://doi.org/10.1016/j.jbiomech.2025.112713" target="_blank" rel="noopener">
+                  Center of mass estimation during non-cyclic activities: comparison of marker-based methods and their fusion with ground reaction forces
+                </a>
+              </h3>
+              <p class="paper-authors">
+                <strong>J. Peng*</strong>, N. M. Alizadeh*, E. Bolivar-Nieto
+              </p>
+              <p class="paper-venue">Journal of Biomechanics, June 2025</p>
+            </article>
 
-          <div><a href="#papers">Papers</a></div>
-          <div><a href="#projects">Projects</a></div>
-          <div><a href="#awards">Awards</a></div>
-          <div><a href="#misc">Miscellaneous</a></div>
+            <article class="paper-item">
+              <h3>Amphibious Biomimetic Robot with Dual Propulsion System</h3>
+              <p class="paper-authors">Y. Jia, <strong>J. Peng</strong>, L. Wang, Q. Yang, X. Tang, J. Mei</p>
+              <p class="paper-venue">Chinese national invention patent, substantive examination stage</p>
+            </article>
+          </div>
         </div>
-    <hr>
-  </div> -->
-  <div class="wrapper divider-line">
-    <hr>
-  </div>
+      </section>
 
-  <div class="wrapper">
-    <div id="bio" class="bio">
-      <div class="bio-text">
-         <p>
-            Master of Science – Research student in Mechanical Engineering at 
-            <a href="https://www.cmu.edu/" target="_blank">Carnegie Mellon University</a> | 
-           B.Eng. in Energy and Power Engineering &amp;  
-           B.S. in Mechanics from 
-            <a href="https://www.tsinghua.edu.cn/" target="_blank">Tsinghua University</a>.
-         </p>
-         <br>
-
-         <p>
-            <strong>Research focus</strong>: robotics control, biorobotics, and assistive robotics.
-         </p>
-         <br>
-
-        <p><strong>Hands-on Experience:</strong></p>
-        <ul>
-            <li><strong>Control Systems</strong>: PID, model-based control, real-time implementation in ROS/ROS2</li>
-            <li><strong>Mechanical Design</strong>: CAD (SolidWorks), rapid prototyping, 3D printing</li>
-            <li><strong>Sensing &amp; Integration</strong>: IMU, force sensors, computer vision, embedded systems (Arduino, STM32)</li>
-            <li><strong>Programming &amp; Simulation</strong>: Python, MATLAB, C/C++, Gazebo, PyBullet</li>
-        </ul>
-        <br>
-
-         <p><strong>Previous Research:</strong></p>
-         <p>
-           Past research at <a href="https://www.pku.edu.cn/" target="_blank" rel="noopener">Peking University</a>, 
-           <a href="https://www.nd.edu/" target="_blank" rel="noopener">University of Notre Dame</a>, and 
-          <a href="https://www.tsinghua.edu.cn/" target="_blank" rel="noopener">Tsinghua University</a> on 
-          <strong>mechanical design</strong>, <strong>sensor fusion</strong>, and <strong>robotic locomotion</strong>.
-         </p>
-        <br>
-
-        <p>
-            <strong><u>>&nbsp;&nbsp;I am currently seeking robotics-related internship opportunities for 2026. 
-            Please feel free to reach out if you are interested in my profile or research.</u></strong>
-        </p>
-      </div>
-    </div>
-    <br>
-
-    <!-- <div id="news" class="bio news">
-      <h1 class="md-heading text-left">
-        News
-      </h1>  
-      <div class="main-text-box">
-        <ul>
-          <li class="indented" data-date="[May 2024]"> <a href="https://arxiv.org/abs/2403.12077">One co-first author paper </a>was accepted to ACL 2024 Findings.</li>
-          <li class="indented" data-date="[Apr 2024]"> Project<a href="https://arxiv.org/abs/2404.07972"> OSWorld </a> is available now.</li>
-          <li class="indented" data-date="[Jan 2024]"> <a href="https://openreview.net/forum?id=9OevMUdods&referrer=%5Bthe%20profile%20of%20Xiaochuan%20Li%5D(%2Fprofile%3Fid%3D~Xiaochuan_Li3)">One co-first author paper</a> was accepted as Spotlight to ICLR 2024.</li>
-          <li class="indented" data-date="[Nov 2023]"> Get financial support from <a href="https://kw.beijing.gov.cn/art/2022/3/1/art_9214_625138.html">the Beijing Natural Science Foundation</a>. </li>
-        </ul>
-      </div>
-    </div> -->
-
-    <div id="papers" class="publications">
-      <h1 class="md-heading text-left">
-        Publications
-      </h1>
-      <div class="pub-list main-text-box">
-      </div>
-    </div>
-
-    <div id="papers" class="publications">
-      <h1 class="md-heading text-left">
-        Patents
-      </h1>
-      <div class="pat-list main-text-box">
-      </div>
-    </div>
-    
-    <div style="height: 10px"></div>
-
-    <div id="awards" >
-      <h1 class="md-heading text-left">
-        Selected Honors & Awards
-      </h1>
-      <div class="award-main-text-box">
-        <ul style="line-height: 1.5">
-          <li class="award-title">First Prize, Beijing “Challenge Cup” Scientific Research & Innovation Competition<br>
-              <span class="award-details">Awarded First Prize in the Beijing “Challenge Cup”, the most prestigious scientific research and innovation competition for university students in the region, placing the project in the top 0.1% of thousands of entries. 2025</span></li>
-          <li class="award-title"> Outstanding Student Leader Award<br>
-              <span class="award-details">A highly selective award recognizing the top 1% of student leaders at Tsinghua University for their outstanding leadership and significant contributions to the campus community. 2024</span></li>
-          <li class="award-title"> All-Round Excellence Scholarship<br>
-              <span class="award-details">A selective scholarship awarded to students ranking in the top 10% for both academic excellence and research contributions, 2023 & 2022</span></li>
-          <li class="award-title">Person of the Year of Xingjian College<br>
-              <span class="award-details">Award to outstanding students, who ranking in the top 1% in all aspects at Xingjian College, Tsinghua University, 2022</span></li>                    
-          </ul>
-      </div>
-    </div>
-
-    <div style="height: 15px"></div>
-
-    <div id="misc">
-      <h1 class="md-heading text-left">
-        Misc
-      </h1> 
-      <div class="main-text-box">
-        I am an excellent student leader, deeply passionate and committed to inspiring student communities and the next generation.
-      </div>
-      <div class="misc-container">
-        <div class="misc-images-column">
-          <img src="./images/misc/studentunion copy.jpg" alt="special-class" class="misc-image"/>
-          <p>
-            I serve as Vice President of the 48th Student Union of Tsinghua University and President of the 1st Student Union of Xingjian College.
-          </p>
+      <section id="experience" class="section section-alt">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Experience</p>
+            <h2>Preparation for doctoral research</h2>
+          </div>
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="timeline-year">Research</div>
+              <div class="timeline-content card">
+                <h3>Cross-institutional research training</h3>
+                <p>
+                  Built research experience across Carnegie Mellon University,
+                  Tsinghua University, Peking University, and the University of
+                  Notre Dame, with projects spanning robotics, mechanics, sensing,
+                  and experimental analysis.
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-year">Leadership</div>
+              <div class="timeline-content card">
+                <h3>Academic and community leadership</h3>
+                <p>
+                  Served as Vice President of the 48th Student Union of Tsinghua
+                  University and President of the 1st Student Union of Xingjian
+                  College, leading teams, coordinating large initiatives, and
+                  supporting student communities.
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-year">Teaching</div>
+              <div class="timeline-content card">
+                <h3>Teaching and outreach</h3>
+                <p>
+                  Supported an underwater robotics course at Tsinghua and taught
+                  physics and robotics in underserved communities, reflecting a
+                  long-term interest in mentorship and broader impact.
+                </p>
+              </div>
+            </article>
+          </div>
         </div>
-        <div class="misc-images-column">
-          <img src="./images/misc/teacher.jpg" alt="thssss" class="misc-image"/>
-          <p>
-            As a teaching assistant for Tsinghua’s underwater robotics course, I also taught physics and robotics in rural China, inspiring underserved communities.
-          </p>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Recognition</p>
+            <h2>Selected honors and awards</h2>
+          </div>
+          <div class="award-grid">
+            <article class="card award-card">
+              <h3>First Prize, Beijing Challenge Cup</h3>
+              <p>
+                Scientific Research and Innovation Competition, 2025. Recognized
+                among the top entries in one of the most competitive student
+                research competitions in Beijing.
+              </p>
+            </article>
+            <article class="card award-card">
+              <h3>Outstanding Student Leader Award</h3>
+              <p>
+                Tsinghua University, 2024. Awarded to a highly selective group of
+                student leaders for campus-wide service and impact.
+              </p>
+            </article>
+            <article class="card award-card">
+              <h3>All-Round Excellence Scholarship</h3>
+              <p>
+                Tsinghua University, 2022 and 2023. For strong academic
+                performance, research engagement, and overall achievement.
+              </p>
+            </article>
+            <article class="card award-card">
+              <h3>Person of the Year of Xingjian College</h3>
+              <p>
+                Tsinghua University, 2022. Recognition for broad excellence in
+                scholarship, leadership, and community contribution.
+              </p>
+            </article>
+          </div>
         </div>
-        <div class="misc-images-column">
-          <img src="./images/misc/leader copy.jpg" alt="icbs" class="misc-image"/>
-          <p>
-            I founded and led the Women's Basketball team at Xingjian College, Tsinghua University, fostering teamwork and promoting sports culture.
-          </p>
-        </div>        
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="container">
+          <div class="contact-panel">
+            <div>
+              <p class="section-kicker">Contact</p>
+              <h2>Open to research conversations</h2>
+              <p>
+                If our interests overlap, I would be glad to connect about PhD
+                opportunities, collaborative research, or related robotics work.
+              </p>
+            </div>
+            <div class="contact-links">
+              <a href="mailto:jingshup@andrew.cmu.edu">jingshup@andrew.cmu.edu</a>
+              <a href="./files/CV_JingshuPeng.pdf">Curriculum Vitae</a>
+              <a href="https://github.com/PengJingshu" target="_blank" rel="noopener">GitHub Profile</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-shell">
+        <p>Last updated: April 2026</p>
+        <p>Designed as a concise academic homepage for PhD applications.</p>
       </div>
-      <div style="height: 25px"></div>
-      <div class="hometown main-text-box">
-      </div>
-      
-    </div>
-  </div>
-
-
-
-  
-<footer class="footer-style">
-  <div class="wrapper">
-    <hr>
-  <div style="display: flex; justify-content: space-between; align-items: center; font-size: 15px; flex-wrap: nowrap;">
-    <span>Last Updated: Nov 2024</span>
-    <span>Get inspired by <a href="https://www.cs.princeton.edu/~danqic/">Prof. Chen's Website</a> and <a href="https://www.hexianghu.com/">Dr. Hu's Website</a></span>
-  </div>
-  </div>
-</footer>
-
-<script>
-  // function copy(destId, sourceId) {
-  //     let dest = document.getElementById(destId);
-  //     let source = document.getElementById(sourceId);
-
-  //     if (!dest || !source) {
-  //         console.error("Either dest or source element does not exist.");
-  //         return;
-  //     }
-
-  //     if (dest.source == source) {
-  //         dest.innerHTML = "";
-  //         dest.source = null;
-  //         dest.style.width = "0px";
-  //         dest.style.border = "";
-  //         dest.style.padding = "0px";
-  //     } else {
-  //         dest.innerHTML = source.innerHTML;
-  //         dest.source = source;
-  //         dest.style.width = "144%";
-  //         dest.style.padding = "10px";
-  //         dest.style.border = "3px dotted black";
-  //         dest.style.background = "#F5F5F5";
-  //         dest.style.margin = "10px 0px 0px 0px";
-  //     }
-  //     dest.blur();
-  // }
-
-
-  
-  let paperCount = 0;
-
-  function addPaper(title, authors, conference, special, link, code) {
-      let listEntry = "<div class=\"pub\">";
-      
-      // use link as arxivLink
-      listEntry += "<div class=\"pub-content\"><div class=\"title\"><a href=\"" + link + "\">" + title + "</a></div>";
-
-      // authors
-      // find "Jingshu Peng" in authors and bold & underline it
-
-      let authorList = authors.split(", ");
-      let newAuthorList = [];
-      for (let i = 0; i < authorList.length; i++) {
-          if (authorList[i].includes("J. Peng")) {
-              newAuthorList.push("<b><u>" + authorList[i] + "</u></b>");
-          } else {
-              newAuthorList.push(authorList[i]);
-          }
-      }
-      listEntry += "<div class=\"authors\">" + newAuthorList.join(", ") + "</div>";
-
-
-      // conference
-      if (conference != null) {
-          if (special != null) {
-            listEntry += "<div class=\"publishon\"><i>" + conference + "</i><span class=\"special\"><b> " + special + "</b></span><span class=\"place\"></span></div>";
-          }
-          else {
-            listEntry += "<div class=\"publishon\"><i>" + conference + "</i></div>";
-          }
-      }
-
-      // pdf
-      //listEntry += " <a href=\"" + link + "\"><span class=\"label\">[paper]</span></a>";
-
-
-      if (code != null) {
-          listEntry += " <a href=\"" + code + "\"><span class=\"label\">[code]</span></a>";
-      }
-
-
-      listEntry += "<br>";
-
-      listEntry += "<div id=\"div" + paperCount + "\" style=\"font-size:15px; width: 0px; padding: 0px; background: rgb(245, 245, 245);margin-top: -12px;\"></div><br></div></div>";
-
-      document.querySelector('.pub-list.main-text-box').innerHTML += listEntry;
-
-      paperCount += 1;
-  }
-  
-  addPaper(
-    title="Multi-environment robotic locomotion through integrated pectoral and caudal fin propulsion",
-    authors="J. Peng, Y. Xie, Q. Yang, Y. Jia, W. Huang, G. Xie",
-    conference="Pubulished at Ocean Engineering, June 2025",
-    special=null,
-    link="https://doi.org/10.1016/j.oceaneng.2025.120982", 
-  )
-
-  addPaper(
-    title="Center of mass estimation during non-cyclic activities: comparison of marker-based methods and their fusion with ground reaction forces", 
-    authors="J. Peng*, N. M. Alizadeh*, E. Bolívar-Nieto", 
-    conference="Pubulished at Journal of Biomechanics, June 2025", 
-    special=null, 
-    link="https://doi.org/10.1016/j.jbiomech.2025.112713", 
-  )
-
-
-    let patentCount = 0;
-
-  function addPatent(title, authors, conference, special, link, code) {
-      let listEntry = "<div class=\"pub\">";
-      
-      // use link as arxivLink
-      if (link != null) {
-        listEntry += "<div class=\"pub-content\"><div class=\"title\">" + title + "</div>";
-      } else {
-        listEntry += "<div class=\"title\"><b>" + title + "</b></div>"
-      }
-
-      // authors
-      // find "Jingshu Peng" in authors and bold & underline it
-
-      let authorList = authors.split(", ");
-      let newAuthorList = [];
-      for (let i = 0; i < authorList.length; i++) {
-          if (authorList[i].includes("J. Peng")) {
-              newAuthorList.push("<b><u>" + authorList[i] + "</u></b>");
-          } else {
-              newAuthorList.push(authorList[i]);
-          }
-      }
-      listEntry += "<div class=\"authors\">" + newAuthorList.join(", ") + "</div>";
-
-
-      // conference
-      if (conference != null) {
-          if (special != null) {
-            listEntry += "<div class=\"publishon\"><i>" + conference + "</i><span class=\"special\"><b> " + special + "</b></span><span class=\"place\"></span></div>";
-          }
-          else {
-            listEntry += "<div class=\"publishon\"><i>" + conference + "</i></div>";
-          }
-      }
-
-      // pdf
-      //listEntry += " <a href=\"" + link + "\"><span class=\"label\">[paper]</span></a>";
-
-
-      if (code != null) {
-          listEntry += " <a href=\"" + code + "\"><span class=\"label\">[code]</span></a>";
-      }
-
-
-      listEntry += "<br>";
-
-      listEntry += "<div id=\"div" + paperCount + "\" style=\"font-size:15px; width: 0px; padding: 0px; background: rgb(245, 245, 245);margin-top: -12px;\"></div><br></div></div>";
-
-      document.querySelector('.pat-list.main-text-box').innerHTML += listEntry;
-
-      patentCount += 1;
-  }
-
-  addPatent(
-    title="Amphibious Biomimetic Robot with Dual Propulsion System",
-    authors="Y. Jia, J. Peng, L. Wang, Q. Yang, X. Tang, J. Mei",
-    conference="National Invention Patent in China (Substantive Examination)",
-    special=null,
-    link = null,
-  )
-  
-  let projectCounter = 0; // Initialize a global counter
-
-  function addProject(title, description, repoLink) {
-  projectCounter++; // Increment the counter for each new project
-  let projectId = `project-${projectCounter}`; // Use the counter to generate a unique ID for each project
-
-  let projectHtml = `
-    <div class="project" id="${projectId}">
-      <h2 class="project-title"><a style="color: #0969da;" href="${repoLink}" target="_blank">${title}</a></h2>
-      <p class="project-description">${description}</p>
-      <div class="project-info">
-        <a href="${repoLink}" target="_blank" class="project-link">
-          <svg class="octicon octicon-repo mr-1" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
-            <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path>
-          </svg>
-          Repository
-        </a>
-        <span class="project-stat project-star">
-          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star">
-            <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path>
-          </svg>
-          <span class="star-count">Loading...</span>
-        </span>
-      </div>
-    </div>
-  `;
-  document.querySelector('.project-container').innerHTML += projectHtml;
-  // Extract owner and repo from the repoLink
-  const repoPathMatch = repoLink.match(/^https:\/\/github\.com\/([^\/]+)\/([^\/]+)/);
-  if (!repoPathMatch) {
-    console.error('Invalid GitHub repository URL:', repoLink);
-    document.querySelector(`#${projectId} .star-count`).textContent = 'N/A';
-    return;
-  }
-  const owner = repoPathMatch[1];
-  const repo = repoPathMatch[2];
-  // Fetch star count from GitHub API
-  fetch(`https://api.github.com/repos/${owner}/${repo}`)
-    .then(response => response.json())
-    .then(data => {
-      const starCount = data.stargazers_count;
-      document.querySelector(`#${projectId} .star-count`).textContent = starCount;
-    })
-    .catch(error => {
-      console.error('Error fetching star count:', error);
-      document.querySelector(`#${projectId} .star-count`).textContent = 'N/A';
-    });
-}
-
-
-
-  // addProject(
-  //   "Self-Reward",
-  //   "[Under Construction] <b>My own implementation</b> of the paper <a href='https://arxiv.org/abs/2401.10020'>Self-Rewarding Language Models</a> which is not open-sourced.",
-  //   "",
-  //   "5"
-  // );
-
-</script>
-
-</body>
-
+    </footer>
+  </body>
 </html>
