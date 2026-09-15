@@ -43,9 +43,12 @@ a:focus-visible,.button:focus-visible{outline:3px solid var(--signal);outline-of
 
 /* Consistent project metadata: institution and full date occupy fixed roles. */
 .project-meta{display:grid;gap:.18rem;text-align:right;white-space:nowrap;font-family:var(--mono);line-height:1.35;text-transform:uppercase}
-.project-meta span{color:var(--blueprint);font-size:.65rem;font-weight:700;letter-spacing:.075em}
-.project-meta time{color:var(--steel);font-size:.73rem;letter-spacing:.045em}
+.system-top .domain{font-size:.82rem;font-weight:700;letter-spacing:.065em}
+.project-meta span{color:var(--blueprint);font-size:.8rem;font-weight:750;letter-spacing:.065em}
+.project-meta time{color:var(--steel);font-size:.8rem;letter-spacing:.04em}
 @media(max-width:580px){.project-meta{margin-top:.7rem;text-align:left;white-space:normal}}
+
+.experience-list{margin-top:1.35rem}
 
 /* Make implementation details scannable without competing with project outcomes. */
 .stack-line{display:flex;align-items:baseline;gap:.9rem;padding-left:1rem;border-left:3px solid var(--signal);font-size:.78rem;line-height:1.55}
