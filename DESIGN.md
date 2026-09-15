@@ -62,7 +62,7 @@ Condensed system sans is reserved for display statements at a restrained editori
 
 ## Layout
 
-The desktop page uses a centered evidence column with direct, plain-language section headings. The portrait carries a compact two-line education block: institution first, degree and graduation year second, without camera labels or decorative system annotations. At 760px the layout becomes a single column. Images reserve their aspect ratio to prevent layout shift.
+The desktop page uses one centered 64rem evidence column for every major content section, with responsive page gutters applied exactly once. Section widths remain aligned across Experience, Projects, Technical Skills, Publications, and Education. The portrait carries a compact two-line education block: institution first, degree and graduation year second, without camera labels or decorative system annotations. At 760px the layout becomes a single column. Images reserve their aspect ratio to prevent layout shift.
 
 ## Elevation & Depth
 
