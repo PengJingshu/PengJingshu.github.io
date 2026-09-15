@@ -1,330 +1,163 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jingshu Peng</title>
-    <link rel="shortcut icon" type="image/x-icon" href="./images/icon/robot.png">
-    <meta
-      name="description"
-      content="Jingshu Peng is a mechanical engineering master's student at Carnegie Mellon University working on robotics, bio-inspired locomotion, controls, sensing, and assistive systems."
-    >
-    <meta
-      name="keywords"
-      content="Jingshu Peng, robotics, Carnegie Mellon University, mechanical engineering, PhD applicant"
-    >
-    <link rel="stylesheet" href="main.css">
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-shell">
-        <a class="brand" href="#top">Jingshu Peng</a>
-        <nav class="site-nav" aria-label="Primary">
-          <a href="#publications">Publications</a>
-          <a href="#about">About</a>
-          <a href="#research">Research</a>
-          <a href="#experience">Experience</a>
-          <a href="#contact">Contact</a>
-        </nav>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jingshu Peng | Robotics Software Engineer</title>
+  <meta name="description" content="Jingshu Peng builds production robotics software across ROS2, perception, motion planning, robot learning, and real-world hardware.">
+  <link rel="icon" type="image/svg+xml" href="./images/icon/jp-mark.svg">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <a class="brand" href="#top" aria-label="Jingshu Peng, home">
+        <img src="./images/icon/jp-mark.svg" alt="" width="48" height="48">
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Toolkit</a>
+        <a href="#research">Research</a>
+      </nav>
+      <a class="nav-cta" href="mailto:jingshup@andrew.cmu.edu">Email Jingshu ↗</a>
+    </div>
+  </header>
+
+  <main id="content">
+    <section id="top" class="hero shell">
+      <div class="hero-copy">
+        <p class="system-label">ROBOTICS SOFTWARE ENGINEER / PITTSBURGH</p>
+        <h1>Software that moves<br><span>real machines.</span></h1>
+        <p class="hero-lead">I build and optimize production robotics software in C++ and Python, bringing perception, planning, and robot learning into reliable ROS 2 systems on real hardware.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#experience">Explore my work</a>
+          <a class="button button-secondary" href="./files/Jingshu_Peng_Resume.pdf">Résumé · PDF</a>
+        </div>
+        <div class="contact-row">
+          <a href="mailto:jingshup@andrew.cmu.edu">jingshup@andrew.cmu.edu</a>
+          <a href="https://www.linkedin.com/in/jingshupeng930" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
       </div>
-    </header>
 
-    <main id="top">
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Carnegie Mellon University · Mechanical Engineering</p>
-            <h1>Jingshu Peng <span class="name-cn">(彭靖舒)</span></h1>
-            <p class="hero-lead">
-              I am a Master of Science research student in Mechanical Engineering at
-              Carnegie Mellon University. My work sits at the intersection of
-              robotics, bio-inspired locomotion, control, and human-centered
-              assistive systems.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="./files/CV_JingshuPeng.pdf">Download CV</a>
-              <a class="button button-secondary" href="mailto:jingshup@andrew.cmu.edu">Email Me</a>
-            </div>
-            <ul class="contact-inline">
-              <li><strong>Email</strong> jingshup [at] andrew.cmu.edu</li>
-              <li><strong>GitHub</strong> <a href="https://github.com/PengJingshu" target="_blank" rel="noopener">PengJingshu</a></li>
-              <li><strong>Location</strong> Pittsburgh, Pennsylvania</li>
-            </ul>
-            <p class="hero-note">
-              I am preparing applications for <strong>Fall 2027 PhD admission</strong>
-              and am especially interested in robotics labs working on embodied
-              intelligence, locomotion, control, and experimental systems.
-            </p>
-          </div>
-          <div class="hero-visual">
-            <div class="portrait-card">
-              <img
-                src="./images/self-portrait/profile copy smallSize.jpg"
-                alt="Portrait of Jingshu Peng"
-                class="portrait"
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="publications" class="section publications-section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-kicker">Selected Publications</p>
-            <h2>Research outputs</h2>
-          </div>
-          <div class="publication-summary">
-            <p>
-              My recent work spans bio-inspired robotic locomotion and biomechanical
-              estimation, with first-author publications in <em>Ocean Engineering</em>
-              and <em>Journal of Biomechanics</em>.
-            </p>
-          </div>
-          <div class="stack">
-            <article class="paper-item featured-paper">
-              <div class="paper-badge">First author</div>
-              <h3>
-                <a href="https://doi.org/10.1016/j.oceaneng.2025.120982" target="_blank" rel="noopener">
-                  Multi-environment robotic locomotion through integrated pectoral and caudal fin propulsion
-                </a>
-              </h3>
-              <p class="paper-authors">
-                <strong>J. Peng</strong>, Y. Xie, Q. Yang, Y. Jia, W. Huang, G. Xie
-              </p>
-              <p class="paper-venue">Ocean Engineering, June 2025</p>
-              <p class="paper-links">
-                <a href="https://doi.org/10.1016/j.oceaneng.2025.120982" target="_blank" rel="noopener">DOI: 10.1016/j.oceaneng.2025.120982</a>
-              </p>
-            </article>
-
-            <article class="paper-item featured-paper">
-              <div class="paper-badge">Co-first author</div>
-              <h3>
-                <a href="https://doi.org/10.1016/j.jbiomech.2025.112713" target="_blank" rel="noopener">
-                  Center of mass estimation during non-cyclic activities: comparison of marker-based methods and their fusion with ground reaction forces
-                </a>
-              </h3>
-              <p class="paper-authors">
-                <strong>J. Peng*</strong>, N. M. Alizadeh*, E. Bolivar-Nieto
-              </p>
-              <p class="paper-venue">Journal of Biomechanics, June 2025</p>
-              <p class="paper-links">
-                <a href="https://doi.org/10.1016/j.jbiomech.2025.112713" target="_blank" rel="noopener">DOI: 10.1016/j.jbiomech.2025.112713</a>
-              </p>
-            </article>
-
-            <article class="paper-item">
-              <h3>Amphibious Biomimetic Robot with Dual Propulsion System</h3>
-              <p class="paper-authors">Y. Jia, <strong>J. Peng</strong>, L. Wang, Q. Yang, X. Tang, J. Mei</p>
-              <p class="paper-venue">Chinese national invention patent, substantive examination stage</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-kicker">About</p>
-            <h2>Research profile</h2>
-          </div>
-          <div class="two-column">
-            <div class="card prose">
-              <p>
-                I am currently pursuing an M.S. in Mechanical Engineering at
-                <a href="https://www.cmu.edu/" target="_blank" rel="noopener">Carnegie Mellon University</a>.
-                Before CMU, I earned a B.Eng. in Energy and Power Engineering and a
-                B.S. in Mechanics from
-                <a href="https://www.tsinghua.edu.cn/" target="_blank" rel="noopener">Tsinghua University</a>.
-              </p>
-              <p>
-                My research goal is to build robotic systems that move robustly in
-                complex environments and interact intelligently with the physical
-                world. I am particularly drawn to problems where mechanical design,
-                sensing, and control must be co-designed rather than treated in
-                isolation.
-              </p>
-              <p>
-                Across projects at Tsinghua University, Peking University, the
-                University of Notre Dame, and Carnegie Mellon, I have worked on
-                robotic locomotion, biomechanical estimation, sensor fusion, and
-                research-oriented prototyping.
-              </p>
-            </div>
-            <div class="card">
-              <h3>Research interests</h3>
-              <div class="tag-list">
-                <span class="tag">Bio-inspired Robotics</span>
-                <span class="tag">Robotic Locomotion</span>
-                <span class="tag">Control Systems</span>
-                <span class="tag">Assistive Robotics</span>
-                <span class="tag">Robot Design</span>
-                <span class="tag">Sensing and Estimation</span>
-              </div>
-              <div class="mini-divider"></div>
-              <h3>Technical toolkit</h3>
-              <ul class="compact-list">
-                <li>Python, MATLAB, C/C++, ROS/ROS2, Gazebo, PyBullet</li>
-                <li>Model-based control, PID, real-time implementation</li>
-                <li>CAD, rapid prototyping, 3D printing, embedded systems</li>
-                <li>IMU, force sensing, computer vision, sensor integration</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="research" class="section section-alt">
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-kicker">Research</p>
-            <h2>Selected highlights</h2>
-          </div>
-          <div class="highlight-grid">
-            <article class="card highlight-card">
-              <p class="card-label">Theme 1</p>
-              <h3>Bio-inspired locomotion</h3>
-              <p>
-                Studied amphibious and underwater robotic locomotion with a focus on
-                integrated propulsion, mechanism design, and experimentally grounded
-                performance analysis.
-              </p>
-            </article>
-            <article class="card highlight-card">
-              <p class="card-label">Theme 2</p>
-              <h3>Biomechanics and estimation</h3>
-              <p>
-                Worked on center-of-mass estimation during non-cyclic human motion,
-                combining marker-based methods with ground reaction force
-                information for improved robustness.
-              </p>
-            </article>
-            <article class="card highlight-card">
-              <p class="card-label">Theme 3</p>
-              <h3>Embodied systems engineering</h3>
-              <p>
-                Enjoy building full-stack experimental systems where mechanical
-                design, controls, sensors, and software are iterated together.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="experience" class="section section-alt">
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-kicker">Experience</p>
-            <h2>Preparation for doctoral research</h2>
-          </div>
-          <div class="timeline">
-            <article class="timeline-item">
-              <div class="timeline-year">Research</div>
-              <div class="timeline-content card">
-                <h3>Cross-institutional research training</h3>
-                <p>
-                  Built research experience across Carnegie Mellon University,
-                  Tsinghua University, Peking University, and the University of
-                  Notre Dame, with projects spanning robotics, mechanics, sensing,
-                  and experimental analysis.
-                </p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <div class="timeline-year">Leadership</div>
-              <div class="timeline-content card">
-                <h3>Academic and community leadership</h3>
-                <p>
-                  Served as Vice President of the 48th Student Union of Tsinghua
-                  University and President of the 1st Student Union of Xingjian
-                  College, leading teams, coordinating large initiatives, and
-                  supporting student communities.
-                </p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <div class="timeline-year">Teaching</div>
-              <div class="timeline-content card">
-                <h3>Teaching and outreach</h3>
-                <p>
-                  Supported an underwater robotics course at Tsinghua and taught
-                  physics and robotics in underserved communities, reflecting a
-                  long-term interest in mentorship and broader impact.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-kicker">Recognition</p>
-            <h2>Selected honors and awards</h2>
-          </div>
-          <div class="award-grid">
-            <article class="card award-card">
-              <h3>First Prize, Beijing Challenge Cup</h3>
-              <p>
-                Scientific Research and Innovation Competition, 2025. Recognized
-                among the top entries in one of the most competitive student
-                research competitions in Beijing.
-              </p>
-            </article>
-            <article class="card award-card">
-              <h3>Outstanding Student Leader Award</h3>
-              <p>
-                Tsinghua University, 2024. Awarded to a highly selective group of
-                student leaders for campus-wide service and impact.
-              </p>
-            </article>
-            <article class="card award-card">
-              <h3>All-Round Excellence Scholarship</h3>
-              <p>
-                Tsinghua University, 2022 and 2023. For strong academic
-                performance, research engagement, and overall achievement.
-              </p>
-            </article>
-            <article class="card award-card">
-              <h3>Person of the Year of Xingjian College</h3>
-              <p>
-                Tsinghua University, 2022. Recognition for broad excellence in
-                scholarship, leadership, and community contribution.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section contact-section">
-        <div class="container">
-          <div class="contact-panel">
-            <div>
-              <p class="section-kicker">Contact</p>
-              <h2>Open to research conversations</h2>
-              <p>
-                If our interests overlap, I would be glad to connect about PhD
-                opportunities, collaborative research, or related robotics work.
-              </p>
-            </div>
-            <div class="contact-links">
-              <a href="mailto:jingshup@andrew.cmu.edu">jingshup@andrew.cmu.edu</a>
-              <a href="./files/CV_JingshuPeng.pdf">Curriculum Vitae</a>
-              <a href="https://github.com/PengJingshu" target="_blank" rel="noopener">GitHub Profile</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-shell">
-        <p>Last updated: April 2026</p>
-        <p>Designed as a concise academic homepage for PhD applications.</p>
+      <div class="hero-system" aria-label="Jingshu Peng education">
+        <div class="portrait-frame"><img src="./images/self-portrait/profile copy smallSize.jpg" alt="Portrait of Jingshu Peng"></div>
+        <p class="hero-note">
+          <strong>Carnegie Mellon University</strong>
+          <span>M.S. Mechanical Engineering · 2027</span>
+        </p>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <section class="evidence" aria-label="Core technical capabilities">
+      <div class="shell evidence-grid">
+        <div><strong>C++ / Python</strong><p>Production robotics systems</p></div>
+        <div><strong>ROS2</strong><p>Planning, state machines, and hardware integration</p></div>
+        <div><strong>3D Perception</strong><p>Point clouds, registration, ICP, and multi-view vision</p></div>
+        <div><strong>Robot Learning</strong><p>Imitation learning, reinforcement learning, and Transformers</p></div>
+      </div>
+    </section>
+
+    <section id="experience" class="section shell signal-section">
+      <div class="section-body">
+        <header class="section-heading"><h2>Experience</h2></header>
+
+        <article class="work-entry work-featured">
+          <div class="entry-header"><div><p class="role">Robotics Software Engineer Intern</p><h3>Instinct Robotics</h3></div><p class="date">PITTSBURGH / MAY—AUG 2026</p></div>
+          <p class="entry-summary">Developed and deployed production C++ and Python robotics software in ROS2, integrating perception, motion planning, state machines, and hardware interfaces for industrial robot workflows.</p>
+          <div class="work-details">
+            <div class="result"><strong>~30%</strong><p>lower perception runtime through algorithm improvements, multithreading, and ROS2 node-level caching.</p></div>
+            <div class="result"><strong>20%</strong><p>shorter cycle time after profiling and optimizing perception and execution pipelines.</p></div>
+          </div>
+          <ul class="plain-list"><li>Resolved failures spanning perception, planning, ROS2 communication, and hardware through structured on-robot testing.</li><li>Built a full-stack tool for annotating robot perception data used in model training and evaluation.</li></ul>
+        </article>
+
+        <article class="work-entry">
+          <div class="entry-header"><div><p class="role">Data Scientist Intern · Smart Bidding</p><h3>OAG Technology</h3></div><p class="date">NEW YORK / MAY—AUG 2025</p></div>
+          <p class="entry-summary">Developed production reinforcement-learning policies using contextual bandits, PPO, and TD3, improving ROI by <strong>18.5%</strong>. Built low-latency inference and data pipelines supporting <strong>100K+ QPS</strong>.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section section-paper signal-section">
+      <div class="section-body">
+        <header class="section-heading"><h2>Selected projects</h2></header>
+
+        <article class="system-entry">
+          <div class="system-top"><p class="domain">ROBOT LEARNING / MANIPULATION</p><div class="project-meta"><span>CMU</span><time datetime="2026-01/2026-05">JAN–MAY 2026</time></div></div>
+          <h3>Multi-View Imitation Learning for Robotic Manipulation</h3>
+          <p>Built an end-to-end imitation-learning system for a Unitree Z1 Pro 6-DoF arm. The pipeline connected SpaceMouse teleoperation, inverse kinematics, synchronized multi-camera observations, proprioception, policy inference, and robot execution.</p>
+          <div class="technical-grid">
+            <div><span>POLICY</span><strong>45M-param Transformer</strong><p>Behavior cloning, cross-attention, and action chunking.</p></div>
+            <div><span>RUNTIME</span><strong>~100 Hz</strong><p>Real-robot inference after 200K training steps.</p></div>
+            <div><span>GENERALIZATION</span><strong>0 → 42.9%</strong><p>Novel-view task success with multi-view training.</p></div>
+          </div>
+          <p class="stack-line"><span>STACK</span> PyTorch · Transformers · Multi-view RGB · Proprioception · IK</p>
+        </article>
+
+        <article class="system-entry">
+          <div class="system-top"><p class="domain">ASSISTIVE ROBOTICS / REAL-TIME CONTROL</p><div class="project-meta"><span>CMU</span><time datetime="2025-08">AUG 2025–PRESENT</time></div></div>
+          <h3>Adaptive Exoskeleton Control</h3>
+          <p>Built a real-time pipeline that transforms IMU streams into online biomechanical estimates using signal processing, low-latency PyTorch inference, and runtime reliability checks. The ongoing system integrates gait-event detection, feedback control, and hardware execution to adapt assistance online.</p>
+          <p class="stack-line"><span>STACK</span> IMU · PyTorch · Signal processing · Gait detection · Feedback control</p>
+        </article>
+
+        <article class="system-entry">
+          <div class="system-top"><p class="domain">EMBEDDED ROBOTICS / SYSTEM INTEGRATION</p><div class="project-meta"><span>TSINGHUA</span><time datetime="2022-08/2023-12">AUG 2022–DEC 2023</time></div></div>
+          <h3>Amphibious Biomimetic Robot</h3>
+          <p>Led a six-member team building an amphibious robot with integrated pectoral- and caudal-fin propulsion. Implemented embedded C++ on STM32, integrated sensors and actuators, and completed hardware bring-up, feedback control, and closed-loop testing.</p>
+          <p class="project-proof"><span>$30K funding</span><span>Peer-reviewed publication</span><span>Invention patent</span></p>
+          <p class="stack-line"><span>STACK</span> Embedded C++ · STM32 · Sensors · Actuators · Closed-loop control</p>
+        </article>
+
+        <article class="system-entry system-compact">
+          <div class="system-top"><p class="domain">AUTONOMOUS DRIVING / REINFORCEMENT LEARNING</p><div class="project-meta"><span>TSINGHUA</span><time datetime="2024-08/2024-12">AUG–DEC 2024</time></div></div>
+          <h3>Dangerous Pedestrian Modeling</h3>
+          <p>Developed an SAC-LSTM policy from real-world trajectories for safety-critical driving simulation, producing 20–30% more realistic and aggressive behavior than rule-based baselines.</p>
+          <p class="stack-line"><span>STACK</span> Soft Actor-Critic · LSTM · Trajectory data · Autonomous driving simulation</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section shell signal-section">
+      <div class="section-body">
+        <header class="section-heading"><h2>Technical skills</h2></header>
+        <div class="toolkit">
+          <article><span>01</span><h3>Programming & systems</h3><p>C++, Python, Linux, Git, multithreading, concurrency, debugging, performance optimization</p></article>
+          <article><span>02</span><h3>Robotics</h3><p>ROS2, MoveIt, TF2, motion planning, state machines, hardware interfaces, feedback control, MuJoCo, Webots</p></article>
+          <article><span>03</span><h3>Perception</h3><p>OpenCV, camera calibration, point clouds, 3D registration, ICP, multi-view vision</p></article>
+          <article><span>04</span><h3>Robot learning</h3><p>PyTorch, imitation learning, behavior cloning, reinforcement learning, Transformers, cross-attention</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section section-ink signal-section">
+      <div class="section-body">
+        <header class="section-heading"><h2>Publications &amp; patent</h2></header>
+        <div class="publication-list">
+          <article><p class="pub-meta">OCEAN ENGINEERING / 2025</p><h3><a href="https://doi.org/10.1016/j.oceaneng.2025.120982" target="_blank" rel="noopener">Multi-environment robotic locomotion through integrated pectoral and caudal fin propulsion ↗</a></h3><p><strong>J. Peng</strong> et al.</p></article>
+          <article><p class="pub-meta">JOURNAL OF BIOMECHANICS / 2025 / CO-FIRST AUTHOR</p><h3><a href="https://doi.org/10.1016/j.jbiomech.2025.112713" target="_blank" rel="noopener">Center of mass estimation during non-cyclic activities ↗</a></h3><p><strong>J. Peng*</strong> et al.</p></article>
+          <article><p class="pub-meta">CHINESE INVENTION PATENT / UNDER EXAMINATION</p><h3>Amphibious Biomimetic Robot with Dual Propulsion System</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell signal-section education">
+      <div class="section-body">
+        <header class="section-heading"><h2>Education</h2></header>
+        <div class="education-grid">
+          <article><p class="date">EXPECTED JUNE 2027</p><h3>Carnegie Mellon University</h3><p>M.S. in Mechanical Engineering (Research)</p></article>
+          <article><p class="date">JUNE 2025</p><h3>Tsinghua University</h3><p>B.Eng. in Energy and Power Engineering (Aerospace)<br>B.S. in Theoretical and Applied Mechanics</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="shell closing-inner"><p class="system-label">READY FOR THE NEXT SYSTEM</p><h2>Let’s build robots<br>that work in the real world.</h2><div><a class="button button-primary" href="mailto:jingshup@andrew.cmu.edu">Start a conversation</a><a class="resume-link" href="./files/Jingshu_Peng_Resume.pdf">Download résumé ↗</a></div></div>
+    </section>
+  </main>
+
+  <footer><div class="shell"><span>JINGSHU PENG / © 2026</span><a href="#top">RETURN TO TOP ↑</a></div></footer>
+</body>
 </html>
