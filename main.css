@@ -60,3 +60,14 @@ a:focus-visible,.button:focus-visible{outline:3px solid var(--signal);outline-of
 .brand img{width:2.35rem;height:2.35rem;transition:opacity .16s ease}
 .brand:hover img{opacity:.68}
 @media(prefers-reduced-motion:reduce){.brand img{transition:none}}
+
+/* Published project evidence follows the existing type, spacing, and link system. */
+.paper-figure{margin:2rem 0;padding:1rem;background:var(--white);border:1px solid var(--line)}
+.paper-figure img{width:100%;height:auto;max-height:42rem;object-fit:contain}
+.paper-figure figcaption{max-width:54rem;margin-top:1rem;color:var(--steel);font-size:.85rem;line-height:1.6}
+.paper-figure a{text-decoration:underline;text-underline-offset:.2em}
+.paper-figure a:hover{color:var(--blueprint)}
+.paper-actions{display:flex;align-items:center;flex-wrap:wrap;gap:1rem;margin-top:1.5rem}
+.paper-actions>span{color:var(--steel);font-size:.85rem}
+#amphibious-robot,#center-of-mass{scroll-margin-top:6rem}
+@media(max-width:580px){.paper-figure{padding:.6rem}.paper-actions{align-items:flex-start;flex-direction:column}}
