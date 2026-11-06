@@ -6,7 +6,7 @@
   <title>Jingshu Peng | Robotics Software Engineer</title>
   <meta name="description" content="Jingshu Peng builds production robotics software across ROS2, perception, motion planning, robot learning, and real-world hardware.">
   <link rel="icon" type="image/svg+xml" href="./images/icon/jp-mark.svg">
-  <link rel="stylesheet" href="main.css?v=20260915-2">
+  <link rel="stylesheet" href="main.css?v=20261105-papers">
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
@@ -107,12 +107,45 @@
           <p class="stack-line"><span>STACK</span> IMU · PyTorch · Signal processing · Gait detection · Feedback control</p>
         </article>
 
-        <article class="system-entry">
-          <div class="system-top"><p class="domain">EMBEDDED ROBOTICS / SYSTEM INTEGRATION</p><div class="project-meta"><span>TSINGHUA</span><time datetime="2022-08/2023-12">AUG 2022–DEC 2023</time></div></div>
+        <article id="amphibious-robot" class="system-entry">
+          <div class="system-top"><p class="domain">EMBEDDED ROBOTICS / SYSTEM INTEGRATION</p><div class="project-meta"><span>TSINGHUA</span><time datetime="2022-08/2023-12">AUG–DEC 2023 · PUBLISHED 2025</time></div></div>
           <h3>Amphibious Biomimetic Robot</h3>
-          <p>Led a six-member team building an amphibious robot with integrated pectoral- and caudal-fin propulsion. Implemented embedded C++ on STM32, integrated sensors and actuators, and completed hardware bring-up, feedback control, and closed-loop testing.</p>
-          <p class="project-proof"><span>$30K funding</span><span>Peer-reviewed publication</span><span>Invention patent</span></p>
-          <p class="stack-line"><span>STACK</span> Embedded C++ · STM32 · Sensors · Actuators · Closed-loop control</p>
+          <p>Robots operating across land and water need efficient propulsion without excessive mechanical complexity. Our stingray-inspired prototype combined undulating pectoral fins with dual caudal fins to explore a compact architecture for multi-environment locomotion, with potential applications in environmental monitoring and surveying.</p>
+          <p><strong>My contribution.</strong> Led a six-member team and implemented embedded C++ on STM32, integrating sensors, actuators, and feedback control. As first author, I contributed to conceptualization, methodology, software, experimental investigation, data curation, formal analysis, and manuscript preparation.</p>
+          <p><strong>Design and validation.</strong> One servo drives each pectoral fin, and a fixed downward fin angle supports movement in water and on land without a separate angle-adjustment mechanism. The team evaluated propulsion using particle image velocimetry, computational fluid dynamics, and prototype tests.</p>
+          <figure class="paper-figure">
+            <img src="./publications/images/amphibious-tests.svg" width="1005" height="895" loading="lazy" alt="Experimental sequences showing caudal-fin swimming, undulating-fin swimming, combined swimming, land movement, and land-water transitions.">
+            <figcaption>Prototype locomotion tests across propulsion modes and environments. Figure 6, Peng et al., <em>Ocean Engineering</em> (2025). <a href="https://doi.org/10.1016/j.oceaneng.2025.120982" target="_blank" rel="noopener">Source paper ↗</a></figcaption>
+          </figure>
+          <div class="technical-grid">
+            <div><span>SWIMMING SPEED</span><strong>+40%</strong><p>0.10 → 0.14 m/s when caudal-fin actuation was added at a pectoral-fin frequency of 1.67 Hz.</p></div>
+            <div><span>COMBINED MODE</span><strong>COT 3.25</strong><p>Measured cost of transport at 0.14 m/s; lower COT indicates less energy per unit weight and distance.</p></div>
+            <div><span>LAND LOCOMOTION</span><strong>0.06 m/s</strong><p>Measured speed on ceramic tiles, with a cost of transport of 5.08.</p></div>
+          </div>
+          <p><strong>Limitations.</strong> Experiments covered a limited speed range and controlled surfaces. Rough-terrain performance, buoyancy control, and flexible caudal fins remain future work; environmental monitoring was a potential application, not a demonstrated deployment.</p>
+          <p class="project-proof"><span>$30K funding</span><span>First-author publication</span><span>Patent application under examination</span></p>
+          <p class="stack-line"><span>STACK</span> Embedded C++ · STM32 · Sensors · Actuators · Feedback control · Experimental analysis</p>
+          <div class="paper-actions"><a class="button button-secondary" href="https://doi.org/10.1016/j.oceaneng.2025.120982" target="_blank" rel="noopener" aria-label="Read amphibious robot paper via DOI (opens in a new tab)">Read paper ↗</a><span>Ocean Engineering · 2025 · First author</span></div>
+        </article>
+
+        <article id="center-of-mass" class="system-entry">
+          <div class="system-top"><p class="domain">BIOMECHANICS / STATE ESTIMATION</p><div class="project-meta"><span>NOTRE DAME / TSINGHUA</span><time datetime="2025">PUBLISHED 2025</time></div></div>
+          <h3>Center of Mass Estimation During Non-Cyclic Activities</h3>
+          <p>Estimating whole-body center of mass supports the study of human balance and informs wearable-robotics research. This study asked when a simple pelvis-marker estimate is sufficient, when whole-body tracking is needed, and whether adding ground reaction forces improves estimation.</p>
+          <p><strong>My contribution.</strong> As co-first author, I contributed to software, methodology, investigation, data curation, formal analysis, validation, visualization, project administration, and manuscript preparation.</p>
+          <p><strong>Methods.</strong> We analyzed an existing dataset of 10 healthy participants performing 14 activities, each repeated three times. Four estimation methods combined pelvis or whole-body markers with or without ground-reaction-force fusion using a Kalman filter. Performance was evaluated using RMS external-force residual: the mismatch between measured net force and force derived from estimated acceleration.</p>
+          <figure class="paper-figure">
+            <img src="./publications/images/com-comparison.svg" width="955" height="950" loading="lazy" alt="Published comparison of four center-of-mass estimation methods: static and dynamic position- and velocity-related force residuals, with participant distributions and activity-level comparisons.">
+            <figcaption>Method comparison across static and dynamic activities; lower force residuals indicate better agreement with measured forces. Figure 2, Alizadeh Noghani, Peng, and Bolívar-Nieto, <em>Journal of Biomechanics</em> (2025). <a href="https://doi.org/10.1016/j.jbiomech.2025.112713" target="_blank" rel="noopener">Source paper ↗</a></figcaption>
+          </figure>
+          <div class="technical-grid">
+            <div><span>STUDY DESIGN</span><strong>10 participants</strong><p>14 activities: 4 static and 10 dynamic, each repeated three times.</p></div>
+            <div><span>DYNAMIC POSITION</span><strong>18.40 → 9.34 N</strong><p>Average position-related force residual: pelvis-based versus whole-body method groups.</p></div>
+            <div><span>DYNAMIC VELOCITY</span><strong>39% lower</strong><p>Pelvis-based velocity-related force residual fell from 18.17 to 11.11 N with force fusion.</p></div>
+          </div>
+          <p><strong>Findings and limitations.</strong> No statistically significant method differences were identified for static activities. Whole-body methods performed better for dynamic position estimation; force fusion improved pelvis-based velocity estimates but did not significantly improve whole-body estimates. Results are limited to 10 healthy participants and assess force residuals rather than direct center-of-mass position error.</p>
+          <p class="stack-line"><span>STACK</span> MATLAB · OpenSim · Kalman filtering · Biomechanical modeling · Statistical analysis</p>
+          <div class="paper-actions"><a class="button button-secondary" href="https://doi.org/10.1016/j.jbiomech.2025.112713" target="_blank" rel="noopener" aria-label="Read center of mass estimation paper via DOI (opens in a new tab)">Read paper ↗</a><span>Journal of Biomechanics · 2025 · Co-first author</span></div>
         </article>
 
         <article class="system-entry system-compact">
