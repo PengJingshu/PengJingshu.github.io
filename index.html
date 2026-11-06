@@ -93,9 +93,10 @@
           <p>Built an end-to-end imitation-learning system for a Unitree Z1 Pro 6-DoF arm. The pipeline connected SpaceMouse teleoperation, inverse kinematics, synchronized multi-camera observations, proprioception, policy inference, and robot execution.</p>
           <div class="technical-grid">
             <div><span>POLICY</span><strong>45M-param Transformer</strong><p>Behavior cloning, cross-attention, and action chunking.</p></div>
-            <div><span>RUNTIME</span><strong>~100 Hz</strong><p>Real-robot inference after 200K training steps.</p></div>
-            <div><span>GENERALIZATION</span><strong>0 → 42.9%</strong><p>Novel-view task success with multi-view training.</p></div>
+            <div><span>INFERENCE</span><strong>~100 Hz</strong><p>Model inference on an RTX 4060 Ti after 200K training steps.</p></div>
+            <div><span>NOVEL-VIEW SUCCESS</span><strong>0% → 42.9%</strong><p>0/21 → 9/21 successful trials after incorporating additional training viewpoints.</p></div>
           </div>
+          <p>In the pushing-T task, incorporating additional training viewpoints improved novel-view success by 42.9 percentage points, with 21 trials per setting. Performance varied across test conditions; these preliminary results motivate further testing across a wider range of viewpoints and task configurations.</p>
           <p class="stack-line"><span>STACK</span> PyTorch · Transformers · Multi-view RGB · Proprioception · IK</p>
         </article>
 
