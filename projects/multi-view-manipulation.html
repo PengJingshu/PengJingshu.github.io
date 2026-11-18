@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multi-View Robotic Manipulation | Jingshu Peng</title>
+<meta name="description" content="A real-robot imitation-learning pipeline built to investigate robustness to new camera viewpoints.">
+<link rel="icon" type="image/svg+xml" href="../images/icon/jp-mark.svg">
+<link rel="stylesheet" href="../main.css?v=20261118-project-pages">
+<link rel="stylesheet" href="../projects.css?v=20261118">
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header">
+    <div class="shell nav-shell">
+      <a class="brand" href="../#top" aria-label="Jingshu Peng, home">
+        <img src="../images/icon/jp-mark.svg" alt="" width="48" height="48">
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../#experience">Experience</a>
+        <a href="../#projects">Projects</a>
+        <a href="../#skills">Toolkit</a>
+        <a href="../#research">Research</a>
+      </nav>
+      <a class="nav-cta" href="mailto:jingshup@andrew.cmu.edu">Email Jingshu ↗</a>
+    </div>
+  </header>
+<main id="content" class="case-main">
+<div class="case-top" id="top"><a class="case-back" href="../#projects">Back to all projects</a><span class="case-index">Project 1 of 4</span></div>
+<article class="system-entry case-study" id="multi-view-manipulation">
+          <div class="system-top"><p class="domain">ROBOT LEARNING / MANIPULATION</p><div class="project-meta"><span>CMU</span><time datetime="2026-01/2026-05">JAN–MAY 2026</time></div></div>
+          <h1>Multi-View Imitation Learning for Robotic Manipulation</h1><nav class="case-toc" aria-label="On this page"><a href="#contribution">My contribution</a><a href="#methods">Methods</a><a href="#results">Results</a><a href="#discussion">Discussion</a></nav>
+          <p>Robot manipulation policies can fail when camera placement changes. Improving their tolerance to new viewpoints could reduce the need to collect demonstrations and retrain policies whenever a workspace is reconfigured. Our team tested whether adding training viewpoints improved performance on a real-world pushing-T task: moving a T-shaped object into a target position and orientation.</p>
+          <p id="contribution"><strong>My contribution.</strong> I developed the teleoperation and data-collection pipeline, trained manipulation policies, and deployed them on the real Unitree Z1 Pro 6-DoF arm. My work connected SpaceMouse input, inverse kinematics, synchronized camera observations, robot state, policy inference, and hardware execution.</p>
+          <h2 class="project-subheading" id="methods">Methods</h2>
+          <p>I used SpaceMouse teleoperation to collect demonstrations that paired synchronized workspace- and wrist-camera images with robot states and action targets. A Transformer policy learned from these demonstrations using behavior cloning, cross-attention to combine inputs, and action chunking to predict sequences of commands. I trained the policy for 200K steps and deployed it on the real arm.</p>
+          <figure class="paper-figure arm-demo">
+            <video controls playsinline muted preload="none" width="960" height="540" poster="../projects/multi-view/frame-0.jpg" aria-label="Successful pushing-T policy rollout on the real robotic arm" aria-describedby="arm-demo-caption">
+              <source src="../projects/multi-view/pushing-t-success.mp4" type="video/mp4">
+              <p>Your browser does not support embedded video. <a href="../projects/multi-view/pushing-t-success.mp4">Open the demonstration video</a>.</p>
+            </video>
+            <figcaption id="arm-demo-caption">A successful policy rollout on the real robot: the arm pushes and reorients the T-shaped object toward the outlined target. This approximately 31-second silent example illustrates one execution; aggregate performance is reported below. <a href="../projects/multi-view/pushing-t-success.mp4">Open video ↗</a></figcaption>
+          </figure>
+          <h2 class="project-subheading" id="results">Results</h2>
+          <div class="technical-grid">
+            <div><span>POLICY</span><strong>45M parameters</strong><p>A Transformer policy with cross-attention, behavior cloning, and action-chunk prediction.</p></div>
+            <div><span>MODEL INFERENCE</span><strong>~100 Hz</strong><p>Measured on an RTX 4060 Ti after 200K training steps; this is not the complete robot control-loop frequency.</p></div>
+            <div><span>NOVEL-VIEW SUCCESS</span><strong>0% → 42.9%</strong><p>0/21 → 9/21 successful trials after incorporating additional training viewpoints.</p></div>
+          </div>
+          <p>In the novel-view test, adding training viewpoints increased task success from 0/21 to 9/21 trials, a gain of 42.9 percentage points. Other test configurations showed different gains, so this result describes one evaluation condition rather than an overall success rate.</p>
+          <h2 class="project-subheading" id="discussion">Discussion and limitations</h2>
+          <p>The improvement supports further investigation of viewpoint-diverse demonstrations. However, each condition had only 21 trials, and the policy still failed in more than half of the novel-view trials. Larger evaluations across camera placements and tasks are needed to assess robustness beyond this setup.</p>
+          <details class="project-details">
+            <summary>Explore the system, data, and model</summary>
+            <div class="project-details-body">
+              <h4>Real-world task and camera setup</h4>
+              <p>The platform pairs the Z1 Pro arm with a workspace camera, a wrist camera, and SpaceMouse teleoperation. Demonstrations capture images together with robot states and action labels.</p>
+              <figure class="paper-figure">
+                <img src="../projects/multi-view/setup.jpg" width="1200" height="900" loading="lazy" alt="Unitree robotic arm beside a T-shaped object and outlined target, with the camera mount and data-collection workspace visible.">
+                <figcaption>Real-world pushing-T platform. Image from slide 7 of the team project presentation.</figcaption>
+              </figure>
+              <h4>From human input to synchronized demonstrations</h4>
+              <p>SpaceMouse commands update a target end-effector pose. Inverse kinematics and a PD layer produce joint-velocity commands, while DDS connects teleoperation, simulation, and the real arm. We used velocity control because it was more robust to deploy than the torque-control setup tested in the project.</p>
+              <figure class="paper-figure">
+                <img src="../projects/multi-view/teleoperation.jpg" width="1186" height="375" loading="lazy" alt="Pipeline from SpaceMouse input through pose updates, inverse kinematics, velocity control, and robot execution, alongside synchronized camera and state collection.">
+                <figcaption>Teleoperation and demonstration-collection pipeline. Figure 2 from the team project report.</figcaption>
+              </figure>
+              <p>Recorded demonstrations combine main- and wrist-camera images with end-effector pose, joint positions and velocities, stick pose, camera pose, and action targets. Poses use a common world frame and rotation-vector representation.</p>
+              <figure class="paper-figure">
+                <img src="../projects/multi-view/observations.jpg" width="1600" height="862" loading="lazy" alt="Synchronized main-camera and wrist-camera observations, a 3D pose visualization, and robot joint position and velocity traces.">
+                <figcaption>Visual and proprioceptive observations recorded together for policy learning. Image from slide 9 of the team project presentation.</figcaption>
+              </figure>
+              <h4>Learning and deployment</h4>
+              <p>The policy uses modality-specific tokenizers, a Transformer backbone, and action decoding. Cross-attention combines visual and proprioceptive information, and action chunking predicts a sequence of commands. Training used 200K steps with a batch size of 128 on an A100 GPU before deployment on the real arm.</p>
+              <figure class="paper-figure">
+                <img src="../projects/multi-view/architecture.jpg" width="1400" height="357" loading="lazy" alt="Modular policy architecture with image and proprioception tokenizers, a Transformer encoder and decoder, and end-effector pose outputs.">
+                <figcaption>Modular architecture used in the project, shown in slide 11 of the team presentation. The slides identify prior work on modular policy architectures as the design reference.</figcaption>
+              </figure>
+            </div>
+          </details>
+          <p class="stack-line"><span>STACK</span> Python · PyTorch · Transformers · Multi-view RGB · SpaceMouse · IK · DDS · Real-robot deployment</p>
+          <p class="project-credit">Team FOCUS · CMU course project</p>
+        </article>
+<nav class="case-pagination" aria-label="Browse projects">
+<a href="./adaptive-exoskeleton.html" rel="prev"><span>Previous project</span><strong>Adaptive exoskeleton</strong></a>
+<a href="../#projects" class="all-projects-link">All projects</a>
+<a href="./amphibious-robot.html" rel="next"><span>Next project</span><strong>Amphibious robot</strong></a>
+</nav>
+</main>
+<footer><div class="shell"><span>JINGSHU PENG / © 2026</span><a href="../">Home</a></div></footer>
+</body></html>

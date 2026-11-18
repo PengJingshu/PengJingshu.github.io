@@ -111,3 +111,9 @@ Copy is direct, technical, and evidence-led. Percentages, frequency, and through
 - **Don't:** use cryptic labels such as “SYSTEMS / SELECTED” or “TOOLKIT / CURRENT.”
 - **Don't:** annotate the portrait with decorative camera or signal-path terminology.
 - **Don't:** add decorative metrics, timelines, or diagrams without factual meaning.
+
+
+## Project overview and detail navigation
+The home page shows four image-led or process-led project previews in a two-column desktop grid and one column on narrow screens. Each preview contains a short objective, one factual outcome, personal role, and a plain View project link. Long methods, figures, videos, and discussions live on independent project pages under projects/*.html.
+Project detail pages retain the main site identity, provide a visible Back to all projects link and in-page method/result navigation, and end with Previous project / Next project navigation. Each project has a shareable URL. Existing home-page project anchors remain on the previews.
+The runtime source for this extension is projects.css, which consumes the existing main.css custom properties. No palette or typography tokens change. Four projects do not need numeric list pagination, autoplay carousels, hidden slide gestures, or modal case studies.

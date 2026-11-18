@@ -7,17 +7,7 @@
   <meta name="description" content="Jingshu Peng builds production robotics software across ROS2, perception, motion planning, robot learning, and real-world hardware.">
   <link rel="icon" type="image/svg+xml" href="./images/icon/jp-mark.svg">
   <link rel="stylesheet" href="main.css?v=20261105-papers">
-  <style>
-    #multi-view-manipulation{scroll-margin-top:6rem}
-    .arm-demo video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:var(--ink)}
-    .project-details{margin-top:2rem;border-block:1px solid var(--line)}
-    .project-details summary{padding:1rem .25rem;cursor:pointer;color:var(--blueprint);font-weight:700}
-    .project-details summary:hover{color:var(--ink)}
-    .project-details summary:focus-visible,.arm-demo video:focus-visible{outline:3px solid var(--signal);outline-offset:4px}
-    .project-details-body{padding:0 .25rem 1.5rem}
-    .project-details-body h4{margin:2rem 0 .7rem;font-size:1.15rem;line-height:1.4;color:var(--ink)}
-    .project-details-body .paper-figure{margin-top:1.25rem}
-  </style>
+  <link rel="stylesheet" href="projects.css?v=20261118">
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
@@ -107,113 +97,27 @@
     </section>
 
     <section id="projects" class="section section-paper signal-section">
-      <div class="section-body">
-        <header class="section-heading"><h2>Selected projects</h2></header>
+<div class="section-body">
+<header class="section-heading"><h2>Selected projects</h2><p class="projects-intro">Robot learning, embedded systems, and human-movement research. Select a project to explore my contribution, methods, and measured results.</p></header>
+<div class="project-preview-grid"><article class="project-preview" id="multi-view-manipulation">
+<a class="project-preview-media" href="./projects/multi-view-manipulation.html" aria-label="Read Multi-View Robotic Manipulation"><img src="./projects/multi-view/setup.jpg" alt="Unitree arm, camera setup, and T-shaped manipulation task." width="800" height="500" loading="lazy"></a>
+<div class="project-preview-copy"><p class="preview-domain">ROBOT LEARNING</p><h3><a href="./projects/multi-view-manipulation.html">Multi-View Robotic Manipulation</a></h3><p class="preview-summary">A real-robot imitation-learning pipeline built to investigate robustness to new camera viewpoints.</p><p class="preview-outcome">0% to 42.9% novel-view success</p><p class="preview-role">Teleoperation · Training · Deployment</p><p class="preview-tech">PyTorch · Transformers · Real hardware</p><a class="project-read-link" href="./projects/multi-view-manipulation.html">View project<span class="visually-hidden">: Multi-View Robotic Manipulation</span></a></div>
+</article>
+<article class="project-preview" id="amphibious-robot">
+<a class="project-preview-media schematic-preview" href="./projects/amphibious-robot.html" aria-label="Read Amphibious Biomimetic Robot"><img src="./projects/amphibious-preview.jpg" alt="Top-view engineering drawing of the amphibious robot and its pectoral and caudal fins." width="800" height="500" loading="lazy"></a>
+<div class="project-preview-copy"><p class="preview-domain">EMBEDDED ROBOTICS</p><h3><a href="./projects/amphibious-robot.html">Amphibious Biomimetic Robot</a></h3><p class="preview-summary">A stingray-inspired robot combining pectoral and caudal fins for movement across water and land.</p><p class="preview-outcome">40% higher swimming speed</p><p class="preview-role">Team lead · Embedded software · First author</p><p class="preview-tech">Embedded C++ · STM32 · Experimental validation</p><a class="project-read-link" href="./projects/amphibious-robot.html">View project<span class="visually-hidden">: Amphibious Biomimetic Robot</span></a></div>
+</article>
+<article class="project-preview" id="center-of-mass">
+<a class="project-preview-media chart-preview" href="./projects/center-of-mass.html" aria-label="Read Whole-Body Center of Mass Estimation"><img src="./publications/images/com-comparison.svg" alt="Comparison of four center-of-mass estimation methods." width="800" height="500" loading="lazy"></a>
+<div class="project-preview-copy"><p class="preview-domain">BIOMECHANICS / ESTIMATION</p><h3><a href="./projects/center-of-mass.html">Whole-Body Center of Mass Estimation</a></h3><p class="preview-summary">A comparison of marker-based and force-fused estimates to guide measurement choices in human-movement research.</p><p class="preview-outcome">Four methods across 14 activities</p><p class="preview-role">Core computational research · Co-first author</p><p class="preview-tech">MATLAB · OpenSim · Kalman filtering</p><a class="project-read-link" href="./projects/center-of-mass.html">View project<span class="visually-hidden">: Whole-Body Center of Mass Estimation</span></a></div>
+</article>
+<article class="project-preview" id="adaptive-exoskeleton">
+<a class="project-preview-media" href="./projects/adaptive-exoskeleton.html" aria-label="Read Adaptive Exoskeleton Control"><div class="pipeline-preview" aria-hidden="true"><span>Wearable sensing</span><i></i><strong>Online estimation</strong><i></i><span>Adaptive assistance</span><small>Research in progress</small></div></a>
+<div class="project-preview-copy"><p class="preview-domain">ASSISTIVE ROBOTICS</p><h3><a href="./projects/adaptive-exoskeleton.html">Adaptive Exoskeleton Control</a></h3><p class="preview-summary">A real-time pipeline connecting wearable sensor data, biomechanical estimation, and adaptive assistance.</p><p class="preview-outcome">Ongoing research</p><p class="preview-role">Sensor processing · Inference · Control integration</p><p class="preview-tech">IMU · PyTorch · Feedback control</p><a class="project-read-link" href="./projects/adaptive-exoskeleton.html">View project<span class="visually-hidden">: Adaptive Exoskeleton Control</span></a></div>
+</article></div>
+</div></section>
 
-        <article id="multi-view-manipulation" class="system-entry">
-          <div class="system-top"><p class="domain">ROBOT LEARNING / MANIPULATION</p><div class="project-meta"><span>CMU</span><time datetime="2026-01/2026-05">JAN–MAY 2026</time></div></div>
-          <h3>Multi-View Imitation Learning for Robotic Manipulation</h3>
-          <p>Camera placement can change when a robot moves to a new workspace, causing a policy trained from one viewpoint to fail. Our team investigated whether demonstrations from additional viewpoints could improve generalization on a real-world pushing-T task: moving a T-shaped object into a target position and orientation.</p>
-          <p><strong>My contribution.</strong> I developed the teleoperation and data-collection pipeline, trained manipulation policies, and deployed them on the real Unitree Z1 Pro 6-DoF arm. My work connected SpaceMouse input, inverse kinematics, synchronized camera observations, robot state, policy inference, and hardware execution.</p>
-          <figure class="paper-figure arm-demo">
-            <video controls playsinline muted preload="none" width="960" height="540" poster="./projects/multi-view/frame-0.jpg" aria-label="Successful pushing-T policy rollout on the real robotic arm" aria-describedby="arm-demo-caption">
-              <source src="./projects/multi-view/pushing-t-success.mp4" type="video/mp4">
-              <p>Your browser does not support embedded video. <a href="./projects/multi-view/pushing-t-success.mp4">Open the demonstration video</a>.</p>
-            </video>
-            <figcaption id="arm-demo-caption">A successful policy rollout on the real robot: the arm pushes and reorients the T-shaped object toward the outlined target. This approximately 31-second silent example illustrates one execution; aggregate performance is reported below. <a href="./projects/multi-view/pushing-t-success.mp4">Open video ↗</a></figcaption>
-          </figure>
-          <div class="technical-grid">
-            <div><span>POLICY</span><strong>45M parameters</strong><p>A Transformer policy with cross-attention, behavior cloning, and action-chunk prediction.</p></div>
-            <div><span>MODEL INFERENCE</span><strong>~100 Hz</strong><p>Measured on an RTX 4060 Ti after 200K training steps; this is not the complete robot control-loop frequency.</p></div>
-            <div><span>NOVEL-VIEW SUCCESS</span><strong>0% → 42.9%</strong><p>0/21 → 9/21 successful trials after incorporating additional training viewpoints.</p></div>
-          </div>
-          <p><strong>Evaluation.</strong> The final report compared conditions with and without the Fuse strategy, with 21 trials per setting. Novel-view success improved by 42.9 percentage points. Gains varied across conditions: North improved from 12/21 to 16/21 successful trials, while West improved from 3/21 to 4/21.</p>
-          <p><strong>Limitations.</strong> Each condition had a small evaluation set, and success remained dependent on the test configuration. The result provides preliminary evidence of improved viewpoint generalization; broader testing is needed before claiming reliable performance across workspaces.</p>
-          <details class="project-details">
-            <summary>Explore the system, data, and model</summary>
-            <div class="project-details-body">
-              <h4>Real-world task and camera setup</h4>
-              <p>The platform pairs the Z1 Pro arm with a workspace camera, a wrist camera, and SpaceMouse teleoperation. Demonstrations capture images together with robot states and action labels.</p>
-              <figure class="paper-figure">
-                <img src="./projects/multi-view/setup.jpg" width="1200" height="900" loading="lazy" alt="Unitree robotic arm beside a T-shaped object and outlined target, with the camera mount and data-collection workspace visible.">
-                <figcaption>Real-world pushing-T platform. Image from slide 7 of the team project presentation.</figcaption>
-              </figure>
-              <h4>From human input to synchronized demonstrations</h4>
-              <p>SpaceMouse commands update a target end-effector pose. Inverse kinematics and a PD layer produce joint-velocity commands, while DDS connects teleoperation, simulation, and the real arm. We used velocity control because it was more robust to deploy than the torque-control setup tested in the project.</p>
-              <figure class="paper-figure">
-                <img src="./projects/multi-view/teleoperation.jpg" width="1186" height="375" loading="lazy" alt="Pipeline from SpaceMouse input through pose updates, inverse kinematics, velocity control, and robot execution, alongside synchronized camera and state collection.">
-                <figcaption>Teleoperation and demonstration-collection pipeline. Figure 2 from the team project report.</figcaption>
-              </figure>
-              <p>Recorded demonstrations combine main- and wrist-camera images with end-effector pose, joint positions and velocities, stick pose, camera pose, and action targets. Poses use a common world frame and rotation-vector representation.</p>
-              <figure class="paper-figure">
-                <img src="./projects/multi-view/observations.jpg" width="1600" height="862" loading="lazy" alt="Synchronized main-camera and wrist-camera observations, a 3D pose visualization, and robot joint position and velocity traces.">
-                <figcaption>Visual and proprioceptive observations recorded together for policy learning. Image from slide 9 of the team project presentation.</figcaption>
-              </figure>
-              <h4>Learning and deployment</h4>
-              <p>The policy uses modality-specific tokenizers, a Transformer backbone, and action decoding. Cross-attention combines visual and proprioceptive information, and action chunking predicts a sequence of commands. Training used 200K steps with a batch size of 128 on an A100 GPU before deployment on the real arm.</p>
-              <figure class="paper-figure">
-                <img src="./projects/multi-view/architecture.jpg" width="1400" height="357" loading="lazy" alt="Modular policy architecture with image and proprioception tokenizers, a Transformer encoder and decoder, and end-effector pose outputs.">
-                <figcaption>Modular architecture used in the project, shown in slide 11 of the team presentation. The slides identify prior work on modular policy architectures as the design reference.</figcaption>
-              </figure>
-            </div>
-          </details>
-          <p class="stack-line"><span>STACK</span> Python · PyTorch · Transformers · Multi-view RGB · SpaceMouse · IK · DDS · Real-robot deployment</p>
-          <p class="project-credit">Team FOCUS · CMU course project</p>
-        </article>
-
-        <article class="system-entry">
-          <div class="system-top"><p class="domain">ASSISTIVE ROBOTICS / REAL-TIME CONTROL</p><div class="project-meta"><span>CMU</span><time datetime="2025-08">AUG 2025–PRESENT</time></div></div>
-          <h3>Adaptive Exoskeleton Control</h3>
-          <p>Built a real-time pipeline that transforms IMU streams into online biomechanical estimates using signal processing, low-latency PyTorch inference, and runtime reliability checks. The ongoing system integrates gait-event detection, feedback control, and hardware execution to adapt assistance online.</p>
-          <p class="stack-line"><span>STACK</span> IMU · PyTorch · Signal processing · Gait detection · Feedback control</p>
-        </article>
-
-        <article id="amphibious-robot" class="system-entry">
-          <div class="system-top"><p class="domain">EMBEDDED ROBOTICS / SYSTEM INTEGRATION</p><div class="project-meta"><span>TSINGHUA</span><time datetime="2022-08/2023-12">AUG–DEC 2023 · PUBLISHED 2025</time></div></div>
-          <h3>Amphibious Biomimetic Robot</h3>
-          <p>Robots operating across land and water need efficient propulsion without excessive mechanical complexity. Our stingray-inspired prototype combined undulating pectoral fins with dual caudal fins to explore a compact architecture for multi-environment locomotion, with potential applications in environmental monitoring and surveying.</p>
-          <p><strong>My contribution.</strong> Led a six-member team and implemented embedded C++ on STM32, integrating sensors, actuators, and feedback control. As first author, I contributed to conceptualization, methodology, software, experimental investigation, data curation, formal analysis, and manuscript preparation.</p>
-          <p><strong>Design and validation.</strong> One servo drives each pectoral fin, and a fixed downward fin angle supports movement in water and on land without a separate angle-adjustment mechanism. The team evaluated propulsion using particle image velocimetry, computational fluid dynamics, and prototype tests.</p>
-          <figure class="paper-figure">
-            <img src="./publications/images/amphibious-tests.svg" width="1005" height="895" loading="lazy" alt="Experimental sequences showing caudal-fin swimming, undulating-fin swimming, combined swimming, land movement, and land-water transitions.">
-            <figcaption>Prototype locomotion tests across propulsion modes and environments. Figure 6, Peng et al., <em>Ocean Engineering</em> (2025). <a href="https://doi.org/10.1016/j.oceaneng.2025.120982" target="_blank" rel="noopener">Source paper ↗</a></figcaption>
-          </figure>
-          <div class="technical-grid">
-            <div><span>SWIMMING SPEED</span><strong>+40%</strong><p>0.10 → 0.14 m/s when caudal-fin actuation was added at a pectoral-fin frequency of 1.67 Hz.</p></div>
-            <div><span>COMBINED MODE</span><strong>COT 3.25</strong><p>Measured cost of transport at 0.14 m/s; lower COT indicates less energy per unit weight and distance.</p></div>
-            <div><span>LAND LOCOMOTION</span><strong>0.06 m/s</strong><p>Measured speed on ceramic tiles, with a cost of transport of 5.08.</p></div>
-          </div>
-          <p><strong>Limitations.</strong> Experiments covered a limited speed range and controlled surfaces. Rough-terrain performance, buoyancy control, and flexible caudal fins remain future work; environmental monitoring was a potential application, not a demonstrated deployment.</p>
-          <p class="project-proof"><span>$30K funding</span><span>First-author publication</span><span>Patent application under examination</span></p>
-          <p class="stack-line"><span>STACK</span> Embedded C++ · STM32 · Sensors · Actuators · Feedback control · Experimental analysis</p>
-          <div class="paper-actions"><a class="button button-secondary" href="https://doi.org/10.1016/j.oceaneng.2025.120982" target="_blank" rel="noopener" aria-label="Read amphibious robot paper via DOI (opens in a new tab)">Read paper ↗</a><span>Ocean Engineering · 2025 · First author</span></div>
-        </article>
-
-        <article id="center-of-mass" class="system-entry">
-          <div class="system-top"><p class="domain">BIOMECHANICS / STATE ESTIMATION</p><div class="project-meta"><span>NOTRE DAME / TSINGHUA</span><time datetime="2025">PUBLISHED 2025</time></div></div>
-          <h3>Center of Mass Estimation During Non-Cyclic Activities</h3>
-          <p>Estimating whole-body center of mass supports the study of human balance and informs wearable-robotics research. This study asked when a simple pelvis-marker estimate is sufficient, when whole-body tracking is needed, and whether adding ground reaction forces improves estimation.</p>
-          <p><strong>My contribution.</strong> As co-first author, I contributed to software, methodology, investigation, data curation, formal analysis, validation, visualization, project administration, and manuscript preparation.</p>
-          <p><strong>Methods.</strong> We analyzed an existing dataset of 10 healthy participants performing 14 activities, each repeated three times. Four estimation methods combined pelvis or whole-body markers with or without ground-reaction-force fusion using a Kalman filter. Performance was evaluated using RMS external-force residual: the mismatch between measured net force and force derived from estimated acceleration.</p>
-          <figure class="paper-figure">
-            <img src="./publications/images/com-comparison.svg" width="955" height="880" loading="lazy" alt="Published comparison of four center-of-mass estimation methods: static and dynamic position- and velocity-related force residuals, with participant distributions and activity-level comparisons.">
-            <figcaption>Method comparison across static and dynamic activities; lower force residuals indicate better agreement with measured forces. Figure 2, Alizadeh Noghani, Peng, and Bolívar-Nieto, <em>Journal of Biomechanics</em> (2025). <a href="https://doi.org/10.1016/j.jbiomech.2025.112713" target="_blank" rel="noopener">Source paper ↗</a></figcaption>
-          </figure>
-          <div class="technical-grid">
-            <div><span>STUDY DESIGN</span><strong>10 participants</strong><p>14 activities: 4 static and 10 dynamic, each repeated three times.</p></div>
-            <div><span>DYNAMIC POSITION</span><strong>18.40 → 9.34 N</strong><p>Average position-related force residual: pelvis-based versus whole-body method groups.</p></div>
-            <div><span>DYNAMIC VELOCITY</span><strong>39% lower</strong><p>Pelvis-based velocity-related force residual fell from 18.17 to 11.11 N with force fusion.</p></div>
-          </div>
-          <p><strong>Findings and limitations.</strong> No statistically significant method differences were identified for static activities. Whole-body methods performed better for dynamic position estimation; force fusion improved pelvis-based velocity estimates but did not significantly improve whole-body estimates. Results are limited to 10 healthy participants and assess force residuals rather than direct center-of-mass position error.</p>
-          <p class="stack-line"><span>STACK</span> MATLAB · OpenSim · Kalman filtering · Biomechanical modeling · Statistical analysis</p>
-          <div class="paper-actions"><a class="button button-secondary" href="https://doi.org/10.1016/j.jbiomech.2025.112713" target="_blank" rel="noopener" aria-label="Read center of mass estimation paper via DOI (opens in a new tab)">Read paper ↗</a><span>Journal of Biomechanics · 2025 · Co-first author</span></div>
-        </article>
-
-        
-      </div>
-    </section>
-
-    <section id="skills" class="section signal-section">
+<section id="skills" class="section signal-section">
       <div class="section-body">
         <header class="section-heading"><h2>Technical skills</h2></header>
         <div class="toolkit">

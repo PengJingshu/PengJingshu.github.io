@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Whole-Body Center of Mass Estimation | Jingshu Peng</title>
+<meta name="description" content="A comparison of marker-based and force-fused estimates to guide measurement choices in human-movement research.">
+<link rel="icon" type="image/svg+xml" href="../images/icon/jp-mark.svg">
+<link rel="stylesheet" href="../main.css?v=20261118-project-pages">
+<link rel="stylesheet" href="../projects.css?v=20261118">
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header">
+    <div class="shell nav-shell">
+      <a class="brand" href="../#top" aria-label="Jingshu Peng, home">
+        <img src="../images/icon/jp-mark.svg" alt="" width="48" height="48">
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../#experience">Experience</a>
+        <a href="../#projects">Projects</a>
+        <a href="../#skills">Toolkit</a>
+        <a href="../#research">Research</a>
+      </nav>
+      <a class="nav-cta" href="mailto:jingshup@andrew.cmu.edu">Email Jingshu ↗</a>
+    </div>
+  </header>
+<main id="content" class="case-main">
+<div class="case-top" id="top"><a class="case-back" href="../#projects">Back to all projects</a><span class="case-index">Project 3 of 4</span></div>
+<article class="system-entry case-study" id="center-of-mass">
+          <div class="system-top"><p class="domain">BIOMECHANICS / STATE ESTIMATION</p><div class="project-meta"><span>NOTRE DAME / TSINGHUA</span><time datetime="2025">PUBLISHED 2025</time></div></div>
+          <h1>Center of Mass Estimation During Non-Cyclic Activities</h1><nav class="case-toc" aria-label="On this page"><a href="#contribution">My contribution</a><a href="#methods">Methods</a><a href="#results">Results</a><a href="#discussion">Discussion</a></nav>
+          <p>Whole-body center of mass is the mass-weighted average position of the body’s mass and is important for studying balance. Researchers can estimate its motion using a few pelvis markers or a larger whole-body marker set, but these options require different amounts of equipment and processing. This study compared their performance during everyday movements to help researchers choose suitable measurement setups for balance and wearable-robotics studies.</p>
+          <p id="contribution"><strong>My contribution.</strong> As co-first author, I carried out the core computational research: implementing the estimation methods, processing the existing dataset, conducting statistical comparisons, validating the results, and preparing figures and manuscript content.</p>
+          <h2 class="project-subheading" id="methods">Methods</h2>
+          <p>I analyzed an existing dataset of 10 healthy participants performing 14 activities, each repeated three times. The activities included standing, rising from a chair, and picking up an object. Four methods estimated center-of-mass position and velocity:</p>
+          <ul class="plain-list method-list">
+            <li><strong>PM:</strong> pelvis markers alone.</li>
+            <li><strong>PMG:</strong> pelvis markers combined with ground reaction forces measured by force plates.</li>
+            <li><strong>WM:</strong> whole-body markers and an OpenSim body model.</li>
+            <li><strong>WMG:</strong> whole-body marker estimates combined with ground reaction forces.</li>
+          </ul>
+          <p>The two combined methods used a Kalman filter to fuse marker estimates with force measurements. I compared all four methods using the root-mean-square (RMS) external-force residual, measured in newtons (N). This residual quantifies the mismatch between measured net force and force derived from estimated acceleration; a lower residual indicates closer agreement.</p>
+          <figure class="paper-figure">
+            <a class="figure-link" href="../publications/images/com-comparison.svg" target="_blank" rel="noopener" aria-label="Open the center-of-mass method comparison figure at full size (opens in a new tab)"><img src="../publications/images/com-comparison.svg" width="955" height="880" loading="lazy" alt="Published comparison of four center-of-mass estimation methods: static and dynamic position- and velocity-related force residuals, with participant distributions and activity-level comparisons."></a>
+            <figcaption>Top row: position-related residuals. Bottom row: velocity-related residuals. Compare PM/PMG with WM/WMG during dynamic activities; lower values indicate closer agreement with measured forces. <a href="../publications/images/com-comparison.svg" target="_blank" rel="noopener">Open full-size figure ↗</a> · Figure 2, Alizadeh Noghani, Peng, and Bolívar-Nieto, <em>Journal of Biomechanics</em> (2025). <a href="https://doi.org/10.1016/j.jbiomech.2025.112713" target="_blank" rel="noopener">Source paper ↗</a></figcaption>
+          </figure>
+          <h2 class="project-subheading" id="results">Results</h2>
+          <p>No statistically significant differences between methods were identified for static activities. For dynamic activities, whole-body methods produced lower position-related residuals than pelvis-based methods. Adding force measurements also improved pelvis-based velocity estimates.</p>
+          <div class="technical-grid">
+            <div><span>STUDY DESIGN</span><strong>10 participants</strong><p>14 activities: 4 static and 10 dynamic, each repeated three times.</p></div>
+            <div><span>DYNAMIC POSITION RESIDUAL</span><strong>18.40 vs. 9.34 N</strong><p>Pelvis-based methods: 18.40 N. Whole-body methods: 9.34 N. These are method-group averages, not a before-and-after optimization.</p></div>
+            <div><span>DYNAMIC VELOCITY</span><strong>39% lower</strong><p>Pelvis-based velocity-related force residual fell from 18.17 to 11.11 N with force fusion.</p></div>
+          </div>
+          <h2 class="project-subheading" id="discussion">Discussion and limitations</h2>
+          <p>The results support using whole-body tracking for dynamic activities and simpler pelvis tracking for activities similar to the static group. Where force plates are available, force fusion can improve pelvis-based velocity estimates. It did not significantly improve whole-body estimates in this study.</p>
+          <p>The study used data from 10 healthy participants, so these findings may not generalize to other populations or movements. The evaluation measured force residuals rather than direct center-of-mass position error.</p>
+          <p class="stack-line"><span>STACK</span> MATLAB · OpenSim · Kalman filtering · Biomechanical modeling · Statistical analysis</p>
+          <div class="paper-actions"><a class="button button-secondary" href="https://doi.org/10.1016/j.jbiomech.2025.112713" target="_blank" rel="noopener" aria-label="Read center of mass estimation paper via DOI (opens in a new tab)">Read paper ↗</a><span>Journal of Biomechanics · 2025 · Co-first author</span></div>
+        </article>
+<nav class="case-pagination" aria-label="Browse projects">
+<a href="./amphibious-robot.html" rel="prev"><span>Previous project</span><strong>Amphibious robot</strong></a>
+<a href="../#projects" class="all-projects-link">All projects</a>
+<a href="./adaptive-exoskeleton.html" rel="next"><span>Next project</span><strong>Adaptive exoskeleton</strong></a>
+</nav>
+</main>
+<footer><div class="shell"><span>JINGSHU PENG / © 2026</span><a href="../">Home</a></div></footer>
+</body></html>
